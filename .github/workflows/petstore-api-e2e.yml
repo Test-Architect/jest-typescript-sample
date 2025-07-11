@@ -1,0 +1,35 @@
+name: PetStore API - E2E
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  petstore-api-e2e:
+    runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: packages/api
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install
+        run: npm ci
+
+      - name: Run PetStore API tests
+        run: npm run test:petstore
+
+      - name: Publish Report
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Report - PetStore Api Tests
+          path: packages/api/result/test-result.xml
+          reporter: jest-junit
+          fail-on-error: false
