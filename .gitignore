@@ -1,0 +1,14 @@
+dist
+node_modules
+.idea
+/api/package-lock.json
+.DS_Store
+/api/jest_html_reporters.html
+/api/jest-html-reporters-attach
+/api/coverage
+jest-html-reporters-attach
+coverage
+jest_html_reporters.html
+result
+packages/api/result/test-result.xml
+test-report.html
