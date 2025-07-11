@@ -1,5 +1,7 @@
 # jest-typescript-sample
 
+**Developer**: [Sakharam Thorat](https://www.linkedin.com/in/sakharamthorat/)
+
 This framework is designed to automate API testing for the PetStore application. It integrates popular tools and libraries like **Supertest**, **JEST**, **Jest HTML Reports**, and **CI/CD - Github Actions**  to provide a robust and maintainable testing solution.
 
 ## Tech Stack
